@@ -1,6 +1,8 @@
-import AppBanner from "../components/shared/AppBanner"
-import ProjectsGrid from "../components/projects/ProjectsGrid"
-import { ProjectsProvider } from "../context/ProjectsContext"
+import AppBanner from "@/components/shared/AppBanner"
+import ProjectsGrid from "@/components/projects/ProjectsGrid"
+import { ProjectsProvider } from "@/context/ProjectsContext"
+import { EditorialCarousel } from "@/components/projects/EditorialCarousel"
+import "@/css/styles.css"
 
 const Home = () => {
   return (
@@ -10,6 +12,9 @@ const Home = () => {
       <ProjectsProvider>
         <ProjectsGrid></ProjectsGrid>
       </ProjectsProvider>
+      <div className="example-container">
+        <EditorialCarousel />
+      </div>
     </div>
   )
 }

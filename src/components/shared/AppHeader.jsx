@@ -1,16 +1,13 @@
 import { useState } from "react"
 import { FiMenu, FiMoon, FiSun, FiX } from "react-icons/fi"
 import { Link } from "react-router-dom"
-import useThemeSwitcher from "../../hooks/useThemeSwitcher"
-
-import logoLight from "../../images/logo-light.svg"
-import logoDark from "../../images/logo-dark.svg"
+import useThemeSwitcher from "@/hooks/useThemeSwitcher"
+import logoLight from "@/images/logo-light.png"
+import logoDark from "@/images/logo-dark.png"
 import { motion } from "framer-motion"
-import Button from "../reusable/Button"
 
 const AppHeader = () => {
   const [showMenu, setShowMenu] = useState(false)
-  const [showModal, setShowModal] = useState(false)
   const [activeTheme, setTheme] = useThemeSwitcher()
 
   function toggleMenu() {
@@ -21,23 +18,13 @@ const AppHeader = () => {
     }
   }
 
-  function showHireMeModal() {
-    if (!showModal) {
-      document.getElementsByTagName("html")[0].classList.add("overflow-y-hidden")
-      setShowModal(true)
-    } else {
-      document.getElementsByTagName("html")[0].classList.remove("overflow-y-hidden")
-      setShowModal(false)
-    }
-  }
-
   return (
     <motion.nav initial={{ opacity: 0 }} animate={{ opacity: 1 }} id="nav" className="sm:container sm:mx-auto">
       <div className="z-10 max-w-screen-lg xl:max-w-screen-xl block sm:flex sm:justify-between sm:items-center py-6">
         {/* Header menu links and small screen hamburger menu */}
         <div className="flex justify-between items-center px-4 sm:px-0">
           <div>
-            <Link to="/">{activeTheme === "dark" ? <img src={logoDark} className="w-36" alt="Dark Logo" /> : <img src={logoLight} className="w-36" alt="Dark Logo" />}</Link>
+            <Link to="/">{activeTheme === "dark" ? <img src={logoDark} className="" alt="Dark Logo" /> : <img src={logoLight} className="" alt="Dark Logo" />}</Link>
           </div>
 
           {/* Theme switcher small screen */}
@@ -56,7 +43,7 @@ const AppHeader = () => {
         </div>
 
         {/* Header links small screen */}
-        <div className={showMenu ? "block m-0 sm:ml-4 mt-5 sm:mt-3 sm:flex p-5 sm:p-0 justify-center items-center shadow-lg sm:shadow-none" : "hidden"}>
+        <div className={showMenu ? "block m-0 sm:ml-4 bg-fuchsia-200 mt-5 sm:mt-3 sm:flex p-5 sm:p-0 justify-center items-center shadow-lg sm:shadow-none" : "hidden"}>
           <Link to="/projects" className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2" aria-label="Projects">
             Projects
           </Link>
@@ -66,11 +53,11 @@ const AppHeader = () => {
         </div>
 
         {/* Header links large screen */}
-        <div className="font-general-medium hidden m-0 sm:ml-4 mt-5 sm:mt-3 sm:flex p-5 sm:p-0 justify-center items-center shadow-lg sm:shadow-none">
-          <Link to="/projects" className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2" aria-label="Projects">
+        <div className="font-general-medium hidden m-0 sm:ml-4 mt-5 sm:mt-3 sm:flex p-5 sm:p-0 justify-center items-center shadow-lg sm:shadow-none" style={{ marginLeft: "auto" }}>
+          <Link to="/projects" className="block text-right text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2" aria-label="Projects">
             Projects
           </Link>
-          <Link to="/about" className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2" aria-label="About Me">
+          <Link to="/about" className="block text-right text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2" aria-label="About Me">
             About Me
           </Link>
         </div>

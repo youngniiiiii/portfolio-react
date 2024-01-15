@@ -2,10 +2,8 @@ import { useContext } from "react"
 import { FiSearch } from "react-icons/fi"
 import ProjectSingle from "./ProjectSingle"
 import { ProjectsContext } from "../../context/ProjectsContext"
-import { EditorialCarousel } from "@/components/projects/EditorialCarousel"
 import { Link } from "react-router-dom"
 import Button from "@/components/reusable/Button"
-import "@/css/styles.css"
 
 const ProjectsGrid = () => {
   const { projects, searchProject, setSearchProject, searchProjectsByTitle, selectProject, setSelectProject, selectProjectsByCategory } = useContext(ProjectsContext)
@@ -95,9 +93,6 @@ const ProjectsGrid = () => {
         <Link to="/projects" className="font-general-medium flex items-center px-6 py-3 rounded-lg shadow-lg hover:shadow-xl bg-indigo-500 hover:bg-indigo-600 focus:ring-1 focus:ring-indigo-900 text-white text-lg sm:text-xl duration-300" aria-label="More Projects">
           <Button title="More Projects" />
         </Link>
-      </div>
-      <div className="example-container">
-        <EditorialCarousel />
       </div>
     </section>
   )
