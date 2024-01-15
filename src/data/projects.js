@@ -1,7 +1,7 @@
 // Import images
-import WebImage1 from "@/images/project-front/port-1.png"
-import WebImage2 from "@/images/project-front/port-2.png"
-import MobileImage1 from "@/images/project-front/port-3.png"
+import WebImage1 from "@/images/project-front/port-1.webp"
+import WebImage2 from "@/images/project-front/port-2.webp"
+import MobileImage1 from "@/images/project-front/port-3.webp"
 
 export const projectsData = [
   {
