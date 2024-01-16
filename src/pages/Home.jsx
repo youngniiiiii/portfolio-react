@@ -15,8 +15,8 @@ const Home = () => {
 
       {/* web design */}
       <div className="text-center">
-        <p className="font-general-medium text-2xl sm:text-4xl mb-1 text-ternary-dark dark:text-ternary-light">프론트엔드 Projects</p>
-        <h3
+        <p className="font-general-medium text-2xl sm:text-4xl mb-1 text-ternary-dark dark:text-ternary-light">WEB DESIGN</p>
+        {/* <h3
           className="font-general-regular 
                         text-center text-secondary-dark
                         dark:text-ternary-light
@@ -25,16 +25,16 @@ const Home = () => {
                         mb-3
                         "
         >
-          Search projects by title or filter by category
-        </h3>
+       WEB DESIGN
+        </h3> */}
       </div>
       <div className="example-container">
         <EditorialCarousel />
       </div>
       {/*  design */}
       <div className="text-center">
-        <p className="font-general-medium text-2xl sm:text-4xl mb-1 text-ternary-dark dark:text-ternary-light">프론트엔드 Projects</p>
-        <h3
+        <p className="font-general-medium text-2xl sm:text-4xl mb-1 text-ternary-dark dark:text-ternary-light">EDITORIAL DESIGN</p>
+        {/* <h3
           className="font-general-regular 
                         text-center text-secondary-dark
                         dark:text-ternary-light
@@ -43,8 +43,8 @@ const Home = () => {
                         mb-3
                         "
         >
-          Search projects by title or filter by category
-        </h3>
+         EDITORIAL DESIGN
+        </h3> */}
       </div>
       <div className="example-container">
         <EditorialCarousel />

@@ -1,4 +1,4 @@
-import profileImage from "@/images/profile.webp"
+import profileImage from "@/assets/images/profile.webp"
 import { useContext } from "react"
 import AboutMeContext from "@/context/AboutMeContext"
 

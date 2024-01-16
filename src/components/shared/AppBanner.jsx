@@ -1,5 +1,5 @@
 import useThemeSwitcher from "@/hooks/useThemeSwitcher"
-import profile from "@/images/profile.webp"
+import profile from "@/assets/images/profile.webp"
 import { motion } from "framer-motion"
 
 const AppBanner = () => {
