@@ -1,14 +1,14 @@
 // Import images
-import WebImage1 from "@/assets/images/project-front/port-1.webp"
-import WebImage2 from "@/assets/images/project-front/port-2.webp"
-import MobileImage1 from "@/assets/images/project-front/port-3.webp"
+import project1 from "@/assets/images/project-front/port-1.webp"
+import project2 from "@/assets/images/project-front/port-2.webp"
+import project3 from "@/assets/images/project-front/port-3.webp"
 
 export const projectsData = [
   {
     id: 1,
-    title: "Google Health Platform",
-    category: "Web Application",
-    img: WebImage2,
+    title: "CAFE JIJO PROJECT ",
+    img: project1,
+    category: "Mobile Application",
     ProjectHeader: {
       title: "Project Management UI - From Context",
       publishDate: "Jul 26, 2021",
@@ -19,12 +19,12 @@ export const projectsData = [
     id: 2,
     title: "React Social App",
     category: "Mobile Application",
-    img: MobileImage1,
+    img: project2,
   },
   {
     id: 3,
     title: "Apple Design System",
     category: "Web Application",
-    img: WebImage1,
+    img: project3,
   },
 ]

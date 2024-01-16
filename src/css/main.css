@@ -507,6 +507,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mt-10 {
   margin-top: 2.5rem;
 }
+.mt-20 {
+  margin-top: 5rem;
+}
+.mt-30 {
+  margin-top: 7.5rem;
+}
 .mb-20 {
   margin-bottom: 5rem;
 }
