@@ -7,8 +7,10 @@ export const projectsData = [
   {
     id: 1,
     title: "CAFE JIJO PROJECT ",
-    img: project1,
+    img: project2,
     category: "Mobile Application",
+    href: "https://cafe-jijo.vercel.app/",
+    alt: "Project",
     ProjectHeader: {
       title: "Project Management UI - From Context",
       publishDate: "Jul 26, 2021",
@@ -18,13 +20,17 @@ export const projectsData = [
   {
     id: 2,
     title: "React Social App",
+    img: project3,
     category: "Mobile Application",
-    img: project2,
+    href: "https://cafe-jijo.vercel.app/",
+    alt: "Project",
   },
   {
     id: 3,
     title: "Apple Design System",
+    img: project1,
     category: "Web Application",
-    img: project3,
+    href: "https://cafe-jijo.vercel.app/",
+    alt: "Project",
   },
 ]
