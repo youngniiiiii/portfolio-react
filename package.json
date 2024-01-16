@@ -1,6 +1,6 @@
 {
   "name": "portfolio-react",
-  "type": "module",
+  "type": "commonjs",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
