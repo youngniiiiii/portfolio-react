@@ -71,7 +71,7 @@ const ProjectsGrid = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 mt-6 sm:gap-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 mt-6 sm:gap-10 mb-20">
         {selectProject
           ? selectProjectsByCategory.map((project) => <ProjectSingle title={project.title} category={project.category} image={project.img} href={project.href} alt={project.alt} description={project.description} key={project.id} />)
           : searchProject
@@ -79,7 +79,7 @@ const ProjectsGrid = () => {
           : projects.map((project) => <ProjectSingle title={project.title} category={project.category} image={project.img} href={project.href} alt={project.alt} description={project.description} key={project.id} />)}
       </div>
 
-      <div className="mt-8 sm:mt-10 flex justify-center">
+      <div className="mt-10 mb-10 sm:mt-10 flex justify-center">
         <Link to="/projects" className="font-general-medium flex items-center px-6 py-3 rounded-lg shadow-lg hover:shadow-xl bg-indigo-500 hover:bg-indigo-600 focus:ring-1 focus:ring-indigo-900 text-white text-lg sm:text-xl duration-300" aria-label="More Projects">
           <Button title="More Projects" />
         </Link>

@@ -46,7 +46,7 @@ export function WebDesignCarousel() {
     <>
       <AnimatePresence initial={false} custom={direction}>
         <motion.img
-          className="editorialImg rounded-xl shadow-lg hover:shadow-xl cursor-pointer mb-10 sm:mb-0 bg-secondary-light dark:bg-ternary-dark"
+          className="editorialImg rounded-xl shadow-cover hover:shadow-xl cursor-pointer mb-10 sm:mb-0 bg-secondary-light dark:bg-ternary-dark"
           key={page}
           // src={images[imageIndex]}
           src={images[imageIndex]}

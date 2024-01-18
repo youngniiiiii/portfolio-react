@@ -1,5 +1,6 @@
-import "./css/main.css"
-import App from "./App"
+import App from "@/App"
+import "@/css/main.css"
+import "@/css/tailwind.css"
 
 // ReactDOM의 createRoot 함수를 임포트합니다.
 import { createRoot } from "react-dom/client"
