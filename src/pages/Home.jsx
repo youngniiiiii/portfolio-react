@@ -17,6 +17,16 @@ const Home = () => {
       {/* web design */}
       <div className="text-center">
         <p className="font-general-medium text-2xl sm:text-4xl mb-1 text-ternary-dark dark:text-ternary-light">WEB DESIGN</p>
+        <h3
+          className="font-general-regular 
+                        text-center text-secondary-dark
+                        dark:text-ternary-light
+                        sm:text-md text-xs
+                        mb-3
+                        "
+        >
+          ( 배너 / 상세페이지 / 공지 / 보정 )
+        </h3>
       </div>
       <div className="example-container">
         <WebDesignCarousel />
@@ -24,17 +34,16 @@ const Home = () => {
       {/*  design */}
       <div className="text-center">
         <p className="font-general-medium text-2xl sm:text-4xl mb-1 text-ternary-dark dark:text-ternary-light">EDITORIAL DESIGN</p>
-        {/* <h3
+        <h3
           className="font-general-regular 
                         text-center text-secondary-dark
                         dark:text-ternary-light
-                        text-md
-                        sm:text-xl
+                        sm:text-md text-xs
                         mb-3
                         "
         >
-         EDITORIAL DESIGN
-        </h3> */}
+          ( 북커버 / 잡지 / 명함 / 리플랫 / 배너 )
+        </h3>
       </div>
       <div className="example-container">
         <EditorialCarousel />
