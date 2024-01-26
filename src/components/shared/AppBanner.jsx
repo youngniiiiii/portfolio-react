@@ -30,7 +30,7 @@ const AppBanner = () => {
           }}
           className="font-general-medium mt-4 text-lg md:text-xl lg:text-2xl xl:text-3xl text-center sm:text-left leading-normal text-gray-500 dark:text-gray-200"
         >
-          Frontend Developer & Design Enthusiast
+          Frontend Developer & Web Designer
         </motion.p>
       </div>
       <motion.div initial={{ opacity: 0, y: -180 }} animate={{ opacity: 1, y: 0 }} transition={{ ease: "easeInOut", duration: 0.9, delay: 0.2 }} className="w-full sm:w-2/3 text-right float-right mt-8 sm:mt-0">

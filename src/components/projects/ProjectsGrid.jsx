@@ -80,7 +80,7 @@ const ProjectsGrid = () => {
       </div>
 
       <div className="mt-10 mb-10 sm:mt-10 flex justify-center">
-        <Link to="/projects" className="font-general-medium flex items-center px-6 py-3 rounded-lg shadow-lg hover:shadow-xl bg-indigo-500 hover:bg-indigo-600 focus:ring-1 focus:ring-indigo-900 text-white text-lg sm:text-xl duration-300" aria-label="More Projects">
+        <Link to="/projects" className="font-general-medium flex items-center px-6 py-3 rounded-lg shadow-lg hover:shadow-xl bg-[#6A9E4C] hover:bg-[#4e7537] focus:ring-1 focus:ring-indigo-900 text-white text-lg sm:text-xl duration-300" aria-label="More Projects">
           <Button title="More Projects" />
         </Link>
       </div>

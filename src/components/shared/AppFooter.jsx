@@ -1,31 +1,20 @@
-import { FiGithub, FiTwitter, FiLinkedin, FiGlobe, FiYoutube } from "react-icons/fi"
-import AppFooterCopyright from "./AppFooterCopyright"
+import { FiGithub, FiLinkedin, FiGlobe, FiYoutube, FiMessageCircle } from "react-icons/fi"
 
 const socialLinks = [
   {
     id: 1,
-    icon: <FiGlobe />,
-    url: "https://www.stoman.me/",
+    icon: <FiMessageCircle />,
+    url: "https://open.kakao.com/o/sJSOnvxd/",
   },
   {
     id: 2,
     icon: <FiGithub />,
-    url: "https://github.com/realstoman",
+    url: "https://github.com/youngniiiiii",
   },
   {
     id: 3,
-    icon: <FiTwitter />,
-    url: "https://twitter.com/realstoman",
-  },
-  {
-    id: 4,
     icon: <FiLinkedin />,
-    url: "https://www.linkedin.com/in/realstoman",
-  },
-  {
-    id: 5,
-    icon: <FiYoutube />,
-    url: "https://www.youtube.com/c/realstoman",
+    url: "https://www.linkedin.com/in/young-ni-4a262a282/",
   },
 ]
 
@@ -44,8 +33,6 @@ const AppFooter = () => {
             ))}
           </ul>
         </div>
-
-        <AppFooterCopyright />
       </div>
     </footer>
   )
