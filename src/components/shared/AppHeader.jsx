@@ -78,7 +78,7 @@ const AppHeader = () => {
         <div
           className={
             showMenu
-              ? 'm-0 mt-5 block items-center justify-center bg-fuchsia-200 p-5 shadow-lg sm:ml-4 sm:mt-3 sm:flex sm:p-0 sm:shadow-none'
+              ? 'm-0 mt-5 block items-center justify-center bg-gray-50 p-5 shadow-lg dark:bg-[#1E3851] dark:text-white sm:ml-4 sm:mt-3 sm:flex sm:p-0 sm:shadow-none'
               : 'hidden'
           }
         >
@@ -91,7 +91,7 @@ const AppHeader = () => {
           </Link>
           <Link
             to="/about"
-            className="text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light border-primary-light dark:border-secondary-dark mb-2  block border-t-2 pt-3 text-left text-lg sm:mx-4 sm:border-t-0 sm:py-2 sm:pt-2"
+            className="text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light mb-2 block text-left  text-lg sm:mx-4 sm:py-2"
             aria-label="About Me"
           >
             About Me

@@ -1,20 +1,20 @@
 import { AnimatePresence } from 'framer-motion';
 import { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import ScrollToTop from './components/ScrollToTop.jsx';
-import AppFooter from './components/shared/AppFooter.jsx';
-import AppHeader from './components/shared/AppHeader.jsx';
-import './css/App.css';
+import ScrollToTop from '@/components/ScrollToTop.jsx';
+import AppFooter from '@/components/shared/AppFooter.jsx';
+import AppHeader from '@/components/shared/AppHeader.jsx';
 import UseScrollToTop from './hooks/useScrollToTop.jsx';
+import '@/css/App.css';
 
-const About = lazy(() => import('./pages/AboutMe.jsx'));
-const Home = lazy(() => import('./pages/Home.jsx'));
-const Projects = lazy(() => import('./pages/Projects.jsx'));
+const About = lazy(() => import('@/pages/AboutMe.jsx'));
+const Home = lazy(() => import('@/pages/Home.jsx'));
+const Projects = lazy(() => import('@/pages/Projects.jsx'));
 
 function App() {
   return (
     <AnimatePresence>
-      <div className=" bg-secondary-light dark:bg-primary-dark transition duration-300">
+      <div className="bg-secondary-light dark:bg-primary-dark transition duration-300">
         <Router>
           <ScrollToTop />
           <AppHeader />
