@@ -1,19 +1,19 @@
 import { useContext } from "react"
 import { FiSearch } from "react-icons/fi"
-import ProjectSingle from "./ProjectSingle"
-import { ProjectsContext } from "../../context/ProjectsContext"
+import ProjectSingle from "@/components/projects/ProjectSingle"
+import { ProjectsContext } from "@/context/ProjectsContext"
 import { Link } from "react-router-dom"
 import Button from "@/components/reusable/Button"
 
 const ProjectsGrid = () => {
-  const { projects, searchProject, setSearchProject, searchProjectsByTitle, selectProject, setSelectProject, selectProjectsByCategory } = useContext(ProjectsContext)
-
+  const { projects, setSearchProject } = useContext(ProjectsContext)
   return (
     <section className="py-5 sm:py-10 mt-5 sm:mt-10">
+      {/* 제목 */}
       <div className="text-center mt-30">
         <p className="font-general-medium text-2xl sm:text-4xl mb-1 text-ternary-dark dark:text-ternary-light">FRONTEND PROJECTS</p>
       </div>
-
+      {/* 검색창 */}
       <div className="mt-10 sm:mt-16">
         <div
           className="
@@ -70,15 +70,14 @@ const ProjectsGrid = () => {
           </div>
         </div>
       </div>
-
+      {/* 프로젝트 정보 */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 mt-6 sm:gap-10 mb-20">
-        {selectProject
-          ? selectProjectsByCategory.map((project) => <ProjectSingle title={project.title} category={project.category} image={project.img} href={project.href} alt={project.alt} description={project.description} key={project.id} />)
-          : searchProject
-          ? searchProjectsByTitle.map((project) => <ProjectSingle title={project.title} category={project.category} image={project.img} href={project.href} alt={project.alt} description={project.description} key={project.id} />)
-          : projects.map((project) => <ProjectSingle title={project.title} category={project.category} image={project.img} href={project.href} alt={project.alt} description={project.description} key={project.id} />)}
+        {projects.map((project) => (
+          <ProjectSingle title={project.title} image={project.img} href={project.href} alt={project.alt} description={project.description} key={project.id} />
+        ))}
       </div>
 
+      {/* 더보기버튼 */}
       <div className="mt-10 mb-10 sm:mt-10 flex justify-center">
         <Link to="/projects" className="font-general-medium flex items-center px-6 py-3 rounded-lg shadow-lg hover:shadow-xl bg-[#6A9E4C] hover:bg-[#4e7537] focus:ring-1 focus:ring-indigo-900 text-white text-lg sm:text-xl duration-300" aria-label="More Projects">
           <Button title="More Projects" />
