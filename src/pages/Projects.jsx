@@ -1,5 +1,5 @@
-import ProjectsGrid from "../components/projects/ProjectsGrid"
-import { ProjectsProvider } from "../context/ProjectsContext"
+import ProjectsGrid from '../components/projects/ProjectsGrid';
+import { ProjectsProvider } from '../context/ProjectsContext';
 
 const Projects = () => {
   return (
@@ -8,7 +8,7 @@ const Projects = () => {
         <ProjectsGrid />
       </div>
     </ProjectsProvider>
-  )
-}
+  );
+};
 
-export default Projects
+export default Projects;

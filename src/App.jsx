@@ -1,15 +1,15 @@
-import { AnimatePresence } from "framer-motion"
-import { lazy, Suspense } from "react"
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
-import ScrollToTop from "./components/ScrollToTop.jsx"
-import AppFooter from "./components/shared/AppFooter.jsx"
-import AppHeader from "./components/shared/AppHeader.jsx"
-import "./css/App.css"
-import UseScrollToTop from "./hooks/useScrollToTop.jsx"
+import { AnimatePresence } from 'framer-motion';
+import { lazy, Suspense } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import ScrollToTop from './components/ScrollToTop.jsx';
+import AppFooter from './components/shared/AppFooter.jsx';
+import AppHeader from './components/shared/AppHeader.jsx';
+import './css/App.css';
+import UseScrollToTop from './hooks/useScrollToTop.jsx';
 
-const About = lazy(() => import("./pages/AboutMe.jsx"))
-const Home = lazy(() => import("./pages/Home.jsx"))
-const Projects = lazy(() => import("./pages/Projects.jsx"))
+const About = lazy(() => import('./pages/AboutMe.jsx'));
+const Home = lazy(() => import('./pages/Home.jsx'));
+const Projects = lazy(() => import('./pages/Projects.jsx'));
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
         <Router>
           <ScrollToTop />
           <AppHeader />
-          <Suspense fallback={""}>
+          <Suspense fallback={''}>
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="projects" element={<Projects />} />
@@ -30,7 +30,7 @@ function App() {
         <UseScrollToTop />
       </div>
     </AnimatePresence>
-  )
+  );
 }
 
-export default App
+export default App;

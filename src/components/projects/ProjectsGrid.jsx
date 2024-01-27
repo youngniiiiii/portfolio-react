@@ -1,64 +1,67 @@
-import { useContext } from "react"
-import { FiSearch } from "react-icons/fi"
-import ProjectSingle from "@/components/projects/ProjectSingle"
-import { ProjectsContext } from "@/context/ProjectsContext"
-import { Link } from "react-router-dom"
-import Button from "@/components/reusable/Button"
+import { useContext } from 'react';
+import { FiSearch } from 'react-icons/fi';
+import ProjectSingle from '@/components/projects/ProjectSingle';
+import { ProjectsContext } from '@/context/ProjectsContext';
+import { Link } from 'react-router-dom';
+import Button from '@/components/reusable/Button';
 
 const ProjectsGrid = () => {
-  const { projects, setSearchProject } = useContext(ProjectsContext)
+  const { projects, setSearchProject, searchProjectsByTitle } =
+    useContext(ProjectsContext);
   return (
-    <section className="py-5 sm:py-10 mt-5 sm:mt-10">
+    <section className="mt-5 py-5 sm:mt-10 sm:py-10">
       {/* 제목 */}
-      <div className="text-center mt-30">
-        <p className="font-general-medium text-2xl sm:text-4xl mb-1 text-ternary-dark dark:text-ternary-light">FRONTEND PROJECTS</p>
+      <div className="mt-30 text-center">
+        <p className="font-general-medium text-ternary-dark dark:text-ternary-light mb-1 text-2xl sm:text-4xl">
+          FRONTEND PROJECTS
+        </p>
       </div>
       {/* 검색창 */}
       <div className="mt-10 sm:mt-16">
         <div
           className="
-                        flex
-                        justify-between
-                        border-b border-primary-light
+                        border-primary-light
                         dark:border-secondary-dark
-                        pb-3
+                        flex justify-between
                         gap-3
+                        border-b
+                        pb-3
                         "
         >
           <div className="flex justify-between gap-2">
             <span
               className="
-                                hidden
-                                sm:block
                                 bg-primary-light
                                 dark:bg-ternary-dark
+                                hidden
+                                cursor-pointer
+                                rounded-xl
                                 p-2.5
                                 shadow-sm
-                                rounded-xl
-                                cursor-pointer
+                                sm:block
                                 "
             >
-              <FiSearch className="text-ternary-dark dark:text-ternary-light w-5 h-5"></FiSearch>
+              <FiSearch className="text-ternary-dark dark:text-ternary-light h-5 w-5"></FiSearch>
             </span>
             <input
               onChange={(e) => {
-                setSearchProject(e.target.value)
+                setSearchProject(e.target.value);
               }}
               className="font-general-medium 
-                                pl-3
-                                pr-1
-                                sm:px-4
-                                py-2
-                                border 
-                            border-gray-200
                                 dark:border-secondary-dark
-                                rounded-lg
-                                text-sm
                                 sm:text-md
                                 bg-secondary-light
                                 dark:bg-ternary-dark
-                                text-primary-dark
-                                dark:text-ternary-light
+                                text-primary-dark 
+                            dark:text-ternary-light
+                                rounded-lg
+                                border
+                                border-gray-200
+                                py-2
+                                pl-3
+                                pr-1
+                                text-sm
+                                sm:px-4
                                 "
               id="name"
               name="name"
@@ -71,20 +74,37 @@ const ProjectsGrid = () => {
         </div>
       </div>
       {/* 프로젝트 정보 */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 mt-6 sm:gap-10 mb-20">
-        {projects.map((project) => (
-          <ProjectSingle title={project.title} image={project.img} href={project.href} alt={project.alt} description={project.description} key={project.id} />
-        ))}
+      <div className="mb-20 mt-6 grid grid-cols-1 sm:grid-cols-2 sm:gap-10 lg:grid-cols-2">
+        {
+          // 'projects' 대신 'searchProjectsByTitle'을 사용하여 필터링된 프로젝트 목록을 보여줍니다.
+          searchProjectsByTitle.map((project) => (
+            <ProjectSingle
+              title={project.title}
+              image={project.img}
+              href={project.href}
+              alt={project.alt}
+              intro={project.intro}
+              details={project.details}
+              technologies={project.technologies}
+              github={project.github}
+              key={project.id}
+            />
+          ))
+        }
       </div>
 
       {/* 더보기버튼 */}
-      <div className="mt-10 mb-10 sm:mt-10 flex justify-center">
-        <Link to="/projects" className="font-general-medium flex items-center px-6 py-3 rounded-lg shadow-lg hover:shadow-xl bg-[#6A9E4C] hover:bg-[#4e7537] focus:ring-1 focus:ring-indigo-900 text-white text-lg sm:text-xl duration-300" aria-label="More Projects">
+      <div className="mb-10 mt-10 flex justify-center sm:mt-10">
+        <Link
+          to="/projects"
+          className="font-general-medium flex items-center rounded-lg bg-[#6A9E4C] px-6 py-3 text-lg text-white shadow-lg duration-300 hover:bg-[#4e7537] hover:shadow-xl focus:ring-1 focus:ring-indigo-900 sm:text-xl"
+          aria-label="More Projects"
+        >
           <Button title="More Projects" />
         </Link>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default ProjectsGrid
+export default ProjectsGrid;

@@ -1,37 +1,41 @@
 // Import images
-import project1 from "@/assets/images/project-front/port-1.webp"
-import project2 from "@/assets/images/project-front/port-2.webp"
-import project3 from "@/assets/images/project-front/port-3.webp"
+import project1 from '@/assets/images/project-front/port-1.webp';
+import project2 from '@/assets/images/project-front/port-2.webp';
+import project3 from '@/assets/images/project-front/port-3.webp';
 
 export const projectsData = [
   {
     id: 1,
-    title: "CAFE JIJO PROJECT",
+    title: 'CAFE JIJO',
     img: project2,
-    href: "https://cafe-jijo.vercel.app/",
-    intro: "메가커피를 모티브로 카페 웹사이트 개발",
-    details: "반응형 디자인, 게시판 구현 ",
-    technologies: "react,Tailwind,React Query,PocketBase",
-    alt: "프로젝트",
+    href: 'https://cafe-jijo.vercel.app/',
+    intro: '메가커피를 모티브한 카페 웹사이트',
+    details: '반응형 디자인, 게시판 구현 ',
+    technologies: 'React, Tailwind, React-Query, PocketBase',
+    github: 'https://github.com/FRONTENDSCHOOL6/JIJO-cafe',
+    alt: '프로젝트',
   },
   {
     id: 2,
-    title: "React Social Appd",
+    title: 'LUMIÉRE DE LAUBE',
     img: project3,
-    href: "https://cafe-jijo.vercel.app/",
-    intro: "메가커피를 모티브로 카페 웹사이트 개발",
-    details: "반응형 디자인, 게시판 구현 ",
-    technologies: "react,Tailwind,React Query,PocketBase",
-    alt: "프로젝트",
+    href: 'https://seobinbang7.github.io/lumieleu/',
+    intro: '전시장에 작품을 감상하는 듯한 포스터 판매 사이트',
+    details: '로그인, 카카오로그인, 회원가입, 로그아웃 구현',
+    technologies: 'React, Tailwind, Kakao-api, Figma, Zustand',
+    github: 'https://github.com/youngniiiiii/lumieleu-?tab=readme-ov-file',
+    alt: '프로젝트',
   },
   {
     id: 3,
-    title: "Apple Design Systemdd",
+    title: 'MARKET KARLY',
     img: project1,
-    href: "https://cafe-jijo.vercel.app/",
-    intro: "메가커피를 모티브로 카페 웹사이트 개발",
-    details: "반응형 디자인, 게시판 구현 ",
-    technologies: "react,Tailwind,React Query,PocketBase",
-    alt: "프로젝트",
+    href: 'https://karly-css3.netlify.app/',
+    intro: "마켓 컬리를 클론 코딩한 '마켓칼리' ",
+    details:
+      'SASS로 클론코딩 후, Tailwind로 리팩토링. mixin 구성과 장바구니 기능 개발 담당',
+    technologies: 'SASS, Tailwind, html, Javascript, json-server',
+    github: 'https://github.com/youngniiiiii/sayho-karly',
+    alt: '프로젝트',
   },
-]
+];
