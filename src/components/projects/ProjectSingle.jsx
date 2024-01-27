@@ -9,6 +9,7 @@ const ProjectSingle = ({
   technologies,
   intro,
   details,
+  description,
   github,
 }) => {
   const navigateToProject = () => {
@@ -31,7 +32,7 @@ const ProjectSingle = ({
             <img src={image} className="rounded-t-xl border-none" alt={alt} />
           </div>
           <div className="flex flex-col items-center justify-center px-4 py-6 text-center">
-            <div className="_flex-center mb-1 gap-1">
+            <div className="_flex-center mb-1 gap-2">
               <h3 className="font-general-medium text-ternary-dark dark:text-ternary-light text-lg md:text-xl ">
                 {title}
               </h3>
@@ -39,15 +40,20 @@ const ProjectSingle = ({
                 <FiGithub className="text-ternary-dark dark:text-ternary-light dark:bg-ternary-dark h-7 w-7 cursor-pointer rounded-xl bg-gray-200 p-1 hover:bg-gray-100 dark:bg-[#181739] "></FiGithub>
               </a>
             </div>
-            <p className="dark:text-ternary-light mb-2 w-fit rounded-xl bg-[#d9e8d6] px-3 py-[2px] text-sm dark:bg-[#181739]">
+            <p className="dark:text-ternary-light mb-2 w-fit rounded-xl bg-[#f1f6f0] px-3 py-[2px] text-sm font-medium text-green-900 dark:bg-[#181739]">
               {technologies}
             </p>
-            <p className="text-md text-ternary-dark dark:text-ternary-light">
-              - {intro}
-            </p>
-            <p className="text-md text-ternary-dark dark:text-ternary-light">
-              - {details}
-            </p>
+            <div className="mb-5 mt-2 flex flex-col items-start justify-start">
+              <p className="text-md text-ternary-dark dark:text-ternary-light">
+                - {intro}
+              </p>
+              <p className="text-md text-ternary-dark dark:text-ternary-light">
+                - {details}
+              </p>
+              <p className="text-md text-ternary-dark dark:text-ternary-light">
+                {description}
+              </p>
+            </div>
           </div>
         </div>
       </div>

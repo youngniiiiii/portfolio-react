@@ -44,13 +44,17 @@ export function WebDesignCarousel() {
 
   return (
     <>
+      <div className="next" onClick={() => paginate(1)}>
+        {'⭢'}
+      </div>
+      <div className="prev" onClick={() => paginate(-1)}>
+        {'⭢'}
+      </div>
       <AnimatePresence initial={false} custom={direction}>
         <motion.img
           className="editorialImg shadow-cover bg-secondary-light dark:bg-ternary-dark mb-10 cursor-pointer rounded-xl hover:shadow-xl sm:mb-0"
           key={page}
-          // src={images[imageIndex]}
           src={images[imageIndex]}
-          // src={web1}
           custom={direction}
           variants={variants}
           initial="enter"
@@ -74,12 +78,6 @@ export function WebDesignCarousel() {
           }}
         />
       </AnimatePresence>
-      <div className="next" onClick={() => paginate(1)}>
-        {'‣'}
-      </div>
-      <div className="prev" onClick={() => paginate(-1)}>
-        {'‣'}
-      </div>
     </>
   );
 }

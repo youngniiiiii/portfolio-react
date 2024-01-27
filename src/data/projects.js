@@ -13,6 +13,7 @@ export const projectsData = [
     details: '반응형 디자인, 게시판 구현 ',
     technologies: 'React, Tailwind, React-Query, PocketBase',
     github: 'https://github.com/FRONTENDSCHOOL6/JIJO-cafe',
+    description: '',
     alt: '프로젝트',
   },
   {
@@ -24,6 +25,7 @@ export const projectsData = [
     details: '로그인, 카카오로그인, 회원가입, 로그아웃 구현',
     technologies: 'React, Tailwind, Kakao-api, Figma, Zustand',
     github: 'https://github.com/youngniiiiii/lumieleu-?tab=readme-ov-file',
+    description: '',
     alt: '프로젝트',
   },
   {
@@ -32,8 +34,8 @@ export const projectsData = [
     img: project1,
     href: 'https://karly-css3.netlify.app/',
     intro: "마켓 컬리를 클론 코딩한 '마켓칼리' ",
-    details:
-      'SASS로 클론코딩 후, Tailwind로 리팩토링. mixin 구성과 장바구니 기능 개발 담당',
+    details: 'SASS로 클론코딩 후, Tailwind로 리팩토링',
+    description: '- mixin 구성과 장바구니 기능 개발',
     technologies: 'SASS, Tailwind, html, Javascript, json-server',
     github: 'https://github.com/youngniiiiii/sayho-karly',
     alt: '프로젝트',

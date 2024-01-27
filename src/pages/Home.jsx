@@ -46,7 +46,7 @@ const Home = () => {
                         text-sm
                         "
         >
-          ( 북커버 / 잡지 / 명함 / 리플랫 / 배너 )
+          ( 북커버 / 포스터 / 잡지 / 명함 / 리플랫 / 배너 )
         </h3>
       </div>
       <div className="example-container">

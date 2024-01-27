@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import Button from '@/components/reusable/Button';
 
 const ProjectsGrid = () => {
-  const { projects, setSearchProject, searchProjectsByTitle } =
+  const { setSearchProject, searchProjectsByTitle } =
     useContext(ProjectsContext);
   return (
     <section className="mt-5 py-5 sm:mt-10 sm:py-10">
@@ -75,22 +75,20 @@ const ProjectsGrid = () => {
       </div>
       {/* 프로젝트 정보 */}
       <div className="mb-20 mt-6 grid grid-cols-1 sm:grid-cols-2 sm:gap-10 lg:grid-cols-2">
-        {
-          // 'projects' 대신 'searchProjectsByTitle'을 사용하여 필터링된 프로젝트 목록을 보여줍니다.
-          searchProjectsByTitle.map((project) => (
-            <ProjectSingle
-              title={project.title}
-              image={project.img}
-              href={project.href}
-              alt={project.alt}
-              intro={project.intro}
-              details={project.details}
-              technologies={project.technologies}
-              github={project.github}
-              key={project.id}
-            />
-          ))
-        }
+        {searchProjectsByTitle.map((project) => (
+          <ProjectSingle
+            title={project.title}
+            image={project.img}
+            href={project.href}
+            alt={project.alt}
+            intro={project.intro}
+            details={project.details}
+            technologies={project.technologies}
+            github={project.github}
+            description={project.description}
+            key={project.id}
+          />
+        ))}
       </div>
 
       {/* 더보기버튼 */}

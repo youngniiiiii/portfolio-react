@@ -48,7 +48,7 @@ body {
 
 .next,
 .prev {
-  top: calc(50% - 20px);
+  top: -50px;
   position: absolute;
   background: white;
   border-radius: 30px;

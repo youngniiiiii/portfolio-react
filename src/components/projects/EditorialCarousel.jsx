@@ -4,23 +4,23 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { wrap } from 'popmotion';
 
 const images = [
-  'https://bongtwoad.cafe24.com/auction/2021/book-1.jpg',
-  'https://bongtwoad.cafe24.com/auction/2021/book-2.jpg',
-  'https://bongtwoad.cafe24.com/auction/2021/book-3.jpg',
-  'https://bongtwoad.cafe24.com/auction/2021/book-4.jpg',
-  'https://bongtwoad.cafe24.com/auction/2021/book-5.jpg',
-  'https://bongtwoad.cafe24.com/auction/2021/book-6.jpg',
+  'https://bongtwoad.cafe24.com/auction/2021/book-17.jpg',
+  'https://bongtwoad.cafe24.com/auction/2021/book-9.jpg',
   'https://bongtwoad.cafe24.com/auction/2021/book-7.jpg',
   'https://bongtwoad.cafe24.com/auction/2021/book-8.jpg',
-  'https://bongtwoad.cafe24.com/auction/2021/book-9.jpg',
   'https://bongtwoad.cafe24.com/auction/2021/book-10.jpg',
+  'https://bongtwoad.cafe24.com/auction/2021/book-16.jpg',
   'https://bongtwoad.cafe24.com/auction/2021/book-11.jpg',
   'https://bongtwoad.cafe24.com/auction/2021/book-12.jpg',
+  'https://bongtwoad.cafe24.com/auction/2021/book-1.jpg',
+  'https://bongtwoad.cafe24.com/auction/2021/book-3.jpg',
+  'https://bongtwoad.cafe24.com/auction/2021/book-6.jpg',
   'https://bongtwoad.cafe24.com/auction/2021/book-13.jpg',
   'https://bongtwoad.cafe24.com/auction/2021/book-14.jpg',
   'https://bongtwoad.cafe24.com/auction/2021/book-15.jpg',
-  'https://bongtwoad.cafe24.com/auction/2021/book-16.jpg',
-  'https://bongtwoad.cafe24.com/auction/2021/book-17.jpg',
+  'https://bongtwoad.cafe24.com/auction/2021/book-2.jpg',
+  'https://bongtwoad.cafe24.com/auction/2021/book-5.jpg',
+  'https://bongtwoad.cafe24.com/auction/2021/book-4.jpg',
 ];
 
 const variants = {
@@ -59,6 +59,12 @@ export function EditorialCarousel() {
 
   return (
     <>
+      <div className="next" onClick={() => paginate(1)}>
+        {'⭢'}
+      </div>
+      <div className="prev" onClick={() => paginate(-1)}>
+        {'⭢'}
+      </div>
       <AnimatePresence initial={false} custom={direction}>
         <motion.img
           className="editorialImg shadow-cover bg-secondary-light dark:bg-ternary-dark mb-10 cursor-pointer rounded-xl hover:shadow-xl sm:mb-0"
@@ -87,12 +93,6 @@ export function EditorialCarousel() {
           }}
         />
       </AnimatePresence>
-      <div className="next" onClick={() => paginate(1)}>
-        {'‣'}
-      </div>
-      <div className="prev" onClick={() => paginate(-1)}>
-        {'‣'}
-      </div>
     </>
   );
 }
