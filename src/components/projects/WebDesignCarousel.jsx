@@ -5,8 +5,11 @@ import { wrap } from 'popmotion';
 import web1 from '@/assets/images/project-web/web-1.webp';
 import web2 from '@/assets/images/project-web/web-2.webp';
 import web3 from '@/assets/images/project-web/web-3.webp';
+const web4 = 'https://bongtwoad.cafe24.com/auction/2021/book-6.jpg';
+const web5 = 'https://bongtwoad.cafe24.com/auction/2021/book-13.jpg';
+const web6 = 'https://bongtwoad.cafe24.com/auction/2021/book-14.jpg';
 
-const images = [web1, web2, web3];
+const images = [web1, web2, web3, web4, web5, web6];
 
 const variants = {
   enter: (direction) => {
